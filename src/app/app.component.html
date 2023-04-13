@@ -1,0 +1,100 @@
+
+<!---------------- pipes (video 12) --------------------->
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-12">
+      <div class="alert alert-info">
+        <div >
+          <p >
+            {{title | uppercase }}
+          </p>
+        </div>
+      </div>
+      <div class="alert alert-success">
+        <div >
+          <p >
+            {{title | lowercase }}
+          </p>
+        </div>
+      </div>
+      <div class="alert alert-warning">
+        <div >
+          <p >
+            {{title | titlecase }}
+          </p>
+        </div>
+      </div>
+      <div class="alert alert-danger">
+        <div >
+          <p >
+            {{d}} + ( Normal d )
+          </p>
+        </div>
+      </div>
+      <div class="alert alert-warning">
+        <div >
+          <p >
+            {{d | date}}  + ( | date)
+          </p>
+        </div>
+      </div>
+      <div class="alert alert-info">
+        <div >
+          <p >
+            {{d | date : 'short'}} + ( date : "short")
+          </p>
+        </div>
+      </div>
+      <div class="alert alert-danger">
+        <div >
+          <p >
+            {{d | date : 'mediumTime'}} + ( date : "mediumTime")
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4 alert alert-warning" >
+      <div class="card">
+        <div class="card-header text-center">
+            Course Title: {{course.courseName | uppercase}}
+        </div>
+        <div class="card-body">
+          <p>
+            Course Count: {{course.noOfaStd | number}}
+          </p>
+          <p>
+            Course Count: {{course.rating | number : '1.0-0'}}
+          </p>
+          <p>
+            Course Count: {{course.price | currency }}
+          </p>
+          <p>
+            Course Count: {{course.price | currency: "INR"}}
+          </p>
+          <p>
+            Course Count: {{course.price | currency: "AUD"}}
+          </p>
+          <p>
+            Course Count: {{course.price | currency: "INR"}}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12">
+      <p>
+        {{title1 | summary | uppercase}}
+      </p>
+    </div>
+
+    <div class="col-sm-12">
+      <p>
+        {{title1 | summary | lowercase}}
+      </p>
+    </div>
+  </div>
+</div>
